@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Page</title>
+    <style>
+        body {
+            background-image: url('C:/Users/harit/Downloads/workplace-with-blue-office-supplies.jpg');
+            background-position: center center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .signupbox {
+            height: 520px;
+            width: 400px;
+            /* background-color: ; */
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 70%;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(6, 247, 34, 0.1);
+            box-shadow: 0 0 40px rgba(31, 27, 65, 0.6);
+            padding: 50px 35px;
+            background-color: rgb(87, 203, 239)
+        }
+
+        form * {
+            font-family: 'Brush Script', 'Brush Script';
+            font-weight: 900;
+            /* color: rgb(224, 24, 201); */
+            color: #4d077f;
+            letter-spacing: 0.5px;
+            outline: none;
+            border: none;
+        }
+
+        form h3 {
+            font-size: 32px;
+            font-weight: bold;
+            line-height: 42px;
+            text-align: center;
+        }
+        form h2 {
+            font-size: 32px;
+            font-weight: bold;
+            line-height: 42px;
+            text-align: center;
+            
+        }
+        label {
+            display: block;
+            margin-top: 30px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        input {
+            display: block;
+            height: 50px;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.81);
+            border-radius: 3px;
+            padding: 0 10px;
+            margin-top: 8px;
+            font-size: 14px;
+            font-weight: 300;
+        }
+
+        ::placeholder {
+            color: rgb(22, 21, 21);
+        }
+
+        button {
+            margin-top: 20px;
+            width: 70%;
+            background-color: #2d5daa;
+            color: white;
+            margin-left: 3rem;
+            font-size: 18px;
+            font-weight: 600;
+            border-radius: 5px;
+            cursor: pointer;
+            /* position: fixed; */
+
+        }
+
+        p {
+            color: black
+        }
+    </style>
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Brush+Script&display=swap">
+    <script>
+        function validateForm() {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+            var reenterpassword = document.getElementById('reenterpassword').value;
+            if (username === '' || password === '' || reenterpassword === '') {
+                alert('Please fill in all fields before creating an account.');
+            } else if (!isValidEmail(username)) {
+                alert('Please enter a valid email address.');
+            } else {
+                checkPassword();
+            }
+        }
+
+        function isValidEmail(email) {
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+        
+        function checkPassword() {
+            var password = document.getElementById("password").value;
+            var confirmPassword = document.getElementById("reenterpassword").value;
+            if (password === confirmPassword) {
+                alert("Successfully created account!");
+            } else {
+                alert("Passwords do not match. Please try again.");
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+    <center><h2 style="color:#4d077f">STUDENT PAGE</h2></center>
+    <div class="signupbox">
+        <div class="signupdetails">
+            <form>
+                <h3>SIGN UP</h3>
+
+                <label for="username">E-MAIL</label>
+                <input type="text" placeholder="Email" id="username">
+
+                <label for="password"7>Create Password</label>
+                <input type="password" placeholder="Password" id="password">
+
+                <label for="reenterpassword">Confirm Password</label>
+                <input type="password" placeholder="Re-enter password" id="reenterpassword">
+                <center>
+                    <button onclick="validateForm()">CREATE ACCOUNT</button><br><br>
+                </center>
+                <p>Already have an account?&nbsp;<a href="C:\Users\harit\Downloads\studentlogin.html">LOGIN</a></p>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

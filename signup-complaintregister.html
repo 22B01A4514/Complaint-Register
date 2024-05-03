@@ -1,0 +1,70 @@
+<html>
+<head>
+<title>Student/Admin</title>
+<style>
+.check {
+    margin-top: 2rem;
+    margin-left: 28rem;
+    background-image: url('C:/Users/harit/OneDrive/Pictures/Screenshots/complaintnote1.png');
+    background-size: cover;
+    width: 320px;
+    height: 300px;
+    position: relative; 
+	font-size:25px;
+	border-radius:30px;
+}
+
+.form-container {
+    margin-left: 3rem;
+    margin-top: 7rem;
+    position: absolute; 
+}
+
+input[type="radio"] {
+    margin-left: 1rem;
+    margin-top: 1rem; 
+}
+
+button {
+    font-size: 15px;
+    margin-left: 5rem;
+    margin-top: 16rem;
+}
+</style>
+</head>
+<body style="background-image:url('C:/Users/harit/OneDrive/Pictures/Screenshots/cpbg.png');background-size:cover">
+<center><p style="font-size:30px;font-family:Cursive"><strong>Welcome.....!!!</strong></p></center>
+<div class="check">
+  <form class="form-container">
+  <p style="margin-top:-3rem;font-family:cursive;font-size:20px"><strong>Select Your Profession!!!</strong></p>
+    <label> 
+      <input type="radio" id="admin" name="prof">
+      <strong>Admin</strong> 
+    </label><br><br>
+    <label> 
+      <input type="radio" id="student" name="prof">
+       <strong>Student</strong>
+    </label> <br>
+   </form> 
+  <button onclick="extractInputs()">Next</button>
+</div><br>
+<br>
+<br><br><br><br>
+<center><p style="font-size:30px;font-family:Cursive"><strong>Feel Free to Share Your Problems.....!!!</strong></p></center>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="C:\Users\harit\OneDrive\Pictures\Camera Roll - Copy\emojis.jpg" height=100 width=1000>
+
+<script>
+function extractInputs() {
+    var adminSelected = document.getElementById('admin').checked;
+    var studentSelected = document.getElementById('student').checked;
+    
+    if (adminSelected) {
+         window.location.href = "file:///C:/Users/harit/Downloads/cpsignup.html";
+    } else if (studentSelected) {
+         window.location.href = "file:///C:/Users/harit/Downloads/studentsignup.html";
+    } 
+}
+</script>
+
+</body>
+</html>
